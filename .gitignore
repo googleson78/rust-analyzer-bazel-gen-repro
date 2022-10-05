@@ -1,0 +1,6 @@
+/bazel-*
+
+# cargo stuff
+/a/target/
+/b/target/
+/c/target/

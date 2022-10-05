@@ -1,0 +1,21 @@
+load("@rules_rust//rust:defs.bzl", "rust_doc_test", "rust_library", "rust_test")
+
+package(default_visibility = ["//visibility:public"])
+
+rust_library(
+    name = "c",
+    srcs = glob(["src/**"]),
+    crate_name = "c",
+    version = "0.8.0",
+    edition = "2018",
+    deps = [],
+)
+
+rust_test(
+    name = "asdf",
+    srcs = ["src/lib.rs"],
+    crate_name = "bla",
+    version = "0.8.0",
+    edition = "2018",
+    deps = ["//a"],
+)
