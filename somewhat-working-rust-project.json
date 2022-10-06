@@ -1,0 +1,75 @@
+{
+  "sysroot_src": "/home/asdf/.cache/bazel/_bazel_asdf/30389a3593105cef6c57fdf0be7a6436/external/rust_analyzer_1.64.0_srcs/lib/rustlib/src/library",
+  "crates": [
+    {
+      "display_name": "c",
+      "root_module": "c/src/lib.rs",
+      "edition": "2018",
+      "deps": [],
+      "is_workspace_member": true,
+      "cfg": [
+        "debug_assertions"
+      ],
+      "target": "x86_64-unknown-linux-gnu",
+      "env": {},
+      "is_proc_macro": false
+    },
+    {
+      "display_name": "b",
+      "root_module": "b/src/lib.rs",
+      "edition": "2018",
+      "deps": [
+        {
+          "crate": 0,
+          "name": "c"
+        }
+      ],
+      "is_workspace_member": true,
+      "cfg": [
+        "test",
+        "debug_assertions"
+      ],
+      "target": "x86_64-unknown-linux-gnu",
+      "env": {},
+      "is_proc_macro": false
+    },
+    {
+      "display_name": "a",
+      "root_module": "a/src/lib.rs",
+      "edition": "2018",
+      "deps": [
+        {
+          "crate": 1,
+          "name": "b"
+        }
+      ],
+      "is_workspace_member": true,
+      "cfg": [
+        "test",
+        "debug_assertions"
+      ],
+      "target": "x86_64-unknown-linux-gnu",
+      "env": {},
+      "is_proc_macro": false
+    },
+    {
+      "display_name": "c_test",
+      "root_module": "c/src/lib.rs",
+      "edition": "2018",
+      "deps": [
+        {
+          "crate": 2,
+          "name": "a"
+        }
+      ],
+      "is_workspace_member": true,
+      "cfg": [
+        "test",
+        "debug_assertions"
+      ],
+      "target": "x86_64-unknown-linux-gnu",
+      "env": {},
+      "is_proc_macro": false
+    }
+  ]
+}
